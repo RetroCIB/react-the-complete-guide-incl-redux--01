@@ -5,12 +5,25 @@ import './Formular.css';
 const Formular = () => {
 
     const [titleValue, setTitleValue] = useState('');
-    const [priceValue, setPriceValue] = useState(0.01);
+    const [priceValue, setPriceValue] = useState('');
     const [dateValue, setDateValue] = useState('');
 
 
     const submitHandler = (event) => {
         event.preventDefault();
+
+        const itemData = {
+            title: titleValue,
+            price: priceValue,
+            date: new Date(dateValue)
+        }
+
+        setTitleValue('');
+        setPriceValue('');
+        setDateValue('');
+
+
+        console.log(itemData);
     } 
     const changeTitleHandler = (event) => {
         setTitleValue(event.target.value);
