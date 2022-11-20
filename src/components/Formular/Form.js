@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import './Form.css';
 
-const Form = () => {
+const Form = (props) => {
 
     const [titleValue, setTitleValue] = useState('');
     const [priceValue, setPriceValue] = useState('');
@@ -18,12 +18,15 @@ const Form = () => {
             date: new Date(dateValue)
         }
 
+        props.onSaveItemDate(itemData);
+
+
         setTitleValue('');
         setPriceValue('');
         setDateValue('');
 
 
-        console.log(itemData);
+        // console.log(itemData);
     }
     const changeTitleHandler = (event) => {
         setTitleValue(event.target.value);

@@ -1,10 +1,7 @@
 .item {
-    margin: 5px auto;
-    padding: 8px;
-    width: 95%;
-    max-width: 42rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-color: var(--dark-gray);
-    border-radius: 8px;
     box-shadow: 0 2px 0px var(--blue-shadow);
     display: flex;
     justify-content: space-between;

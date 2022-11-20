@@ -4,10 +4,12 @@ import './Item.css';
 import ItemDate from './ItemDate';
 import ItemTitle from "./ItemTitle";
 import ItemPrice from "./ItemPrice";
+import Card from "../UI/Card";
 
 const Item = (props) => {
     return (
-        <div className="item">
+
+        <Card className="item">
 
             <div className="item-content item-content__left">
                 <ItemDate value={props.options.date}></ItemDate>
@@ -30,7 +32,7 @@ const Item = (props) => {
                 </div>
             </div>
 
-        </div>
+        </Card>
     )
 }
 
