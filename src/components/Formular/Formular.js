@@ -12,8 +12,6 @@ const Formular = (props) => {
             ...enteredItemData,
             id: parseInt((Math.random() * 8999999999 + 1000000000), 10).toString(16)
         }
-        console.log('item|',itemData);
-
         props.onAddItem(itemData);
     }
 

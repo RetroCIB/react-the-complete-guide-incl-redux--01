@@ -1,14 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import Card from "../UI/Card";
 
 import './Filter.css';
 
 const Filter = (props) => {
 
-    const changeYearHandler = (event) => {
-        const year = event.target.value;
-        props.onChangeYear(year);
+    const onChangeHandler = (event)=>{
+        const selectedYear = event.target.value;
+        props.onChangeYear(parseInt(selectedYear));
     }
+
 
     return (
         <Card className="filter">
@@ -16,11 +17,14 @@ const Filter = (props) => {
                 <div>
                     Filter by Year
                 </div>
-                <select onChange={changeYearHandler}>
-                    <option value='2020'>2020</option>
-                    <option value='2021'>2021</option>
-                    <option value='2022'>2022</option>
-                    <option value='2023'>2023</option>
+                <select onChange={onChangeHandler} value={props.selected}>
+                    {
+                        props.years.map((year)=>{
+                            return (
+                                <option value={year} key={year}>{year}</option>
+                            )
+                        })
+                    }
                 </select>
             </div>
 
