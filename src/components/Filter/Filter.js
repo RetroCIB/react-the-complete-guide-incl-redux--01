@@ -39,7 +39,7 @@ const Filter = (props) => {
                     Filter by Year
                 </div>
                 <select onChange={onChangeHandler} value={props.selected}>
-                    <option value=''  disabled></option>
+                    {/*<option value=''  disabled></option>*/}
                     {
                         props.years.map((year) => {
                             return (

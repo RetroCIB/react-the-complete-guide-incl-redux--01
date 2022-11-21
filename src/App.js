@@ -16,8 +16,8 @@ const items_dummy = [
 function App() {
 
     const [items, setItems] = useState(items_dummy);
-    // const [year, setYear] = useState(items_dummy[0]?.date?.getFullYear() || '');
-    const [year, setYear] = useState( '');
+    const [year, setYear] = useState(items_dummy[0]?.date?.getFullYear() || '');
+    // const [year, setYear] = useState( '');
 
     const uniqueItemsYears = [
         ...new Set(items.map(item => (new Date(item.date)).getFullYear()))
