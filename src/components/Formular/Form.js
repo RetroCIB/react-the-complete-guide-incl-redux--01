@@ -14,7 +14,7 @@ const Form = (props) => {
 
         const itemData = {
             title: titleValue,
-            price: priceValue,
+            price: +priceValue,
             date: new Date(dateValue)
         }
 
@@ -54,7 +54,8 @@ const Form = (props) => {
                     <input type="date" value={dateValue} onChange={changeDateHandler}/>
                 </div>
                 <div className="formular-action">
-                    <button>add item</button>
+                    <button className="btn" type="submit">add item</button>
+                    <button className="btn" type="button" onClick={props.onCloseFormular}>cancel</button>
                 </div>
             </div>
 

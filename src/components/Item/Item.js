@@ -7,6 +7,14 @@ import ItemPrice from "./ItemPrice";
 import Card from "../UI/Card";
 
 const Item = (props) => {
+
+    const requestRemoveItemById = (event) =>{
+        event.preventDefault();
+        props.requestRemoveItemById(props.options.id);
+        console.log('sters - ', props.options.id);
+    }
+
+
     return (
 
         <Card className="item">
@@ -23,12 +31,12 @@ const Item = (props) => {
                 </div>
 
                 <div className="item-actions">
-                    <button className="item-action">
+                    <button className="item-action" onClick={requestRemoveItemById}>
                         -
                     </button>
-                    <button className="item-action">
-                        -
-                    </button>
+                    {/*<button className="item-action">*/}
+                    {/*    -*/}
+                    {/*</button>*/}
                 </div>
             </div>
 

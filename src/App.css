@@ -1,13 +1,46 @@
 .App {
-  background-color: var(--light-gray);
-  color: var(--white);
+    background-color: var(--light-gray);
+    color: var(--white);
 
-  min-height: 100vh;
+    min-height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-  padding: 3rem 1rem;
+    padding: 3rem 1rem;
+}
+
+
+/* btn */
+.btn {
+    position: relative;
+    display: flex;
+    border: 0px;
+    border-radius: 5px;
+    padding: 7px 15px;
+    font-size: 14px;
+    background: var(--dark-gray);
+    color: var(--white);
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-left: 3px;
+    margin-right:3px;
+}
+.btn-gray{
+    background: var(--dark-gray);
+    color: var(--white);
+}
+.btn-blue{
+    background: var(--blue);
+    color: var(--white);
+}
+.btn-white{
+    background: var(--white);
+    color: var(--dark-gray);
+}
+
+.btn:active {
+    top: 3px;
 }
